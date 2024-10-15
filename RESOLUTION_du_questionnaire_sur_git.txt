@@ -1,0 +1,223 @@
+INSTRUCTIONS
+
+1-Créer un dossier appelé learn_git.
+dzabbah3@KOUAKOU3 MINGW64 ~/Desktop
+$ cd GoMyCode/
+
+dzabbah3@KOUAKOU3 MINGW64 ~/Desktop/GoMyCode
+$ git clone https://github.com/dzabbah/learn_git.git
+Cloning into 'learn_git'...
+warning: You appear to have cloned an empty repository.
+
+dzabbah3@KOUAKOU3 MINGW64 ~/Desktop/GoMyCode
+$ dir
+Social-links-profile  learn_git  mankono  pictures  test  testgit
+
+dzabbah3@KOUAKOU3 MINGW64 ~/Desktop/GoMyCode
+$ cd learn_git/
+
+
+
+2-cd(Changer de repertoire) dans le dossier learn_git
+dzabbah3@KOUAKOU3 MINGW64 ~/Desktop/GoMyCode
+$ cd learn_git/
+
+dzabbah3@KOUAKOU3 MINGW64 ~/Desktop/GoMyCode/learn_git (main)
+$ ls
+
+
+
+3-Créer un fichier appelé third.txt
+dzabbah3@KOUAKOU3 MINGW64 ~/Desktop/GoMyCode/learn_git (main)
+$ touch third.txt
+
+
+4-Initialiser un dépôt git vide.
+dzabbah3@KOUAKOU3 MINGW64 ~/Desktop/GoMyCode/learn_git (main)
+$ git init
+Reinitialized existing Git repository in C:/Users/dzabbah3/Desktop/GoMyCode/lear
+n_git/.git/
+
+
+
+5-Ajouter third.txt à la staging area.
+dzabbah3@KOUAKOU3 MINGW64 ~/Desktop/GoMyCode/learn_git (main)
+$ git add third.txt
+
+
+
+6-Commiter avec le message "adding third.txt".
+dzabbah3@KOUAKOU3 MINGW64 ~/Desktop/GoMyCode/learn_git (main)
+$ git commit -m "adding third.txt"
+[main (root-commit) 76d4f66] adding third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 third.txt
+
+
+
+7-Vérifiez votre validation avec git log.
+dzabbah3@KOUAKOU3 MINGW64 ~/Desktop/GoMyCode/learn_git (main)
+$ git log
+commit 76d4f665850961164a69f1f1d59860a270bb1798 (HEAD -> main)
+Author: dzabbah <sergerufin1984@gmail.com>
+Date:   Wed Oct 16 03:34:21 2024 +0530
+
+    adding third.txt
+
+dzabbah3@KOUAKOU3 MINGW64 ~/Desktop/GoMyCode/learn_git (main)
+$ git status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+
+dzabbah3@KOUAKOU3 MINGW64 ~/Desktop/GoMyCode/learn_git (main)
+$ git diff
+
+dzabbah3@KOUAKOU3 MINGW64 ~/Desktop/GoMyCode/learn_git (main)
+$ git status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+
+
+
+8-Créez un autre fichier appelé fourth.txt.
+dzabbah3@KOUAKOU3 MINGW64 ~/Desktop/GoMyCode/learn_git (main)
+$ touch fourth.txt
+
+
+9-Ajoutez fourth.txt à la staging area.
+dzabbah3@KOUAKOU3 MINGW64 ~/Desktop/GoMyCode/learn_git (main)
+$ git add fourth.txt
+
+
+10-Effectuez un commit avec le message "adding fourth.txt".
+dzabbah3@KOUAKOU3 MINGW64 ~/Desktop/GoMyCode/learn_git (main)
+$ git commit -m "adding fourth.txt"
+[main dd28309] adding fourth.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fourth.txt
+
+
+11-Enlevez le fichier third.txt.
+dzabbah3@KOUAKOU3 MINGW64 ~/Desktop/GoMyCode/learn_git (main)
+$ git rm third.txt
+rm 'third.txt'
+
+
+12-Ajoutez cette modification à la staging area. (En utilisant la commande "git add ."
+dzabbah3@KOUAKOU3 MINGW64 ~/Desktop/GoMyCode/learn_git (main)
+$ git add .
+
+
+13-Commiter avec le message "removing third.txt".
+dzabbah3@KOUAKOU3 MINGW64 ~/Desktop/GoMyCode/learn_git (main)
+$ git commit -m "removing third.txt"
+[main c840e31] removing third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 third.txt
+
+
+
+14-Vérifiez vos commits en utilisant git log.
+dzabbah3@KOUAKOU3 MINGW64 ~/Desktop/GoMyCode/learn_git (main)
+$ git log
+commit c840e31c8a09ec951124cd7bd5b81153fde7fdd8 (HEAD -> main)
+Author: dzabbah <sergerufin1984@gmail.com>
+Date:   Wed Oct 16 03:44:10 2024 +0530
+
+    removing third.txt
+
+commit dd28309560e7829edb24ee9c4697ea178b757221
+Author: dzabbah <sergerufin1984@gmail.com>
+Date:   Wed Oct 16 03:36:37 2024 +0530
+
+    adding fourth.txt
+
+commit 76d4f665850961164a69f1f1d59860a270bb1798
+Author: dzabbah <sergerufin1984@gmail.com>
+Date:   Wed Oct 16 03:34:21 2024 +0530
+
+    adding third.txt
+
+
+
+15-Changez vos paramètres globaux pour core.pager=cat - vous pouvez en savoir plus ici.
+dzabbah3@KOUAKOU3 MINGW64 ~/Desktop/GoMyCode/learn_git (main)
+$ git config --global core.pager cat
+
+dzabbah3@KOUAKOU3 MINGW64 ~/Desktop/GoMyCode/learn_git (main)
+$ git status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+
+
+
+16-Écrivez la commande appropriée pour lister toutes les configurations globales pour git sur votre machine.
+dzabbah3@KOUAKOU3 MINGW64 ~/Desktop/GoMyCode/learn_git (main)
+$ git config --list --show-origin
+file:C:/Program Files/Git/etc/gitconfig diff.astextplain.textconv=astextplain
+file:C:/Program Files/Git/etc/gitconfig filter.lfs.clean=git-lfs clean -- %f
+file:C:/Program Files/Git/etc/gitconfig filter.lfs.smudge=git-lfs smudge -- %f
+file:C:/Program Files/Git/etc/gitconfig filter.lfs.process=git-lfs filter-proces
+s
+file:C:/Program Files/Git/etc/gitconfig filter.lfs.required=true
+file:C:/Program Files/Git/etc/gitconfig http.sslbackend=openssl
+file:C:/Program Files/Git/etc/gitconfig http.sslcainfo=C:/Program Files/Git/ming
+w64/etc/ssl/certs/ca-bundle.crt
+file:C:/Program Files/Git/etc/gitconfig core.autocrlf=true
+file:C:/Program Files/Git/etc/gitconfig core.fscache=true
+file:C:/Program Files/Git/etc/gitconfig core.symlinks=false
+file:C:/Program Files/Git/etc/gitconfig pull.rebase=false
+file:C:/Program Files/Git/etc/gitconfig credential.helper=manager
+file:C:/Program Files/Git/etc/gitconfig credential.https://dev.azure.com.usehttp
+path=true
+file:C:/Program Files/Git/etc/gitconfig init.defaultbranch=master
+file:C:/Users/dzabbah3/.gitconfig       user.email=sergerufin1984@gmail.com
+file:C:/Users/dzabbah3/.gitconfig       user.name=dzabbah
+file:C:/Users/dzabbah3/.gitconfig       core.pager=cat
+file:.git/config        core.repositoryformatversion=0
+file:.git/config        core.filemode=false
+file:.git/config        core.bare=false
+file:.git/config        core.logallrefupdates=true
+file:.git/config        core.symlinks=false
+file:.git/config        core.ignorecase=true
+file:.git/config        remote.origin.url=https://github.com/dzabbah/learn_git.g
+it
+file:.git/config        remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+file:.git/config        branch.main.remote=origin
+file:.git/config        branch.main.merge=refs/heads/main
+
+
+
+17-Vous pouvez taper git config --global pour savoir comment faire.
+dzabbah3@KOUAKOU3 MINGW64 ~/Desktop/GoMyCode/learn_git (main)
+$ git config --global --list
+user.email=sergerufin1984@gmail.com
+user.name=dzabbah
+core.pager=cat
+
+dzabbah3@KOUAKOU3 MINGW64 ~/Desktop/GoMyCode/learn_git (main)
+$ git push -u origin main
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (7/7), 639 bytes | 319.00 KiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/dzabbah/learn_git.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+dzabbah3@KOUAKOU3 MINGW64 ~/Desktop/GoMyCode/learn_git (main)
+$ git push -u origin main
+branch 'main' set up to track 'origin/main'.
+Everything up-to-date
+
